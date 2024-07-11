@@ -38,3 +38,27 @@ The Dockerfile for the backend (`backend/Dockerfile`) includes similar directive
 - **COPY . .**: Copies the backend application code into the container.
 - **EXPOSE 3001**: Exposes port 3001 for external access to the backend service.
 - **CMD ["npm", "start"]**: Defines the command to start the backend server upon container startup.
+
+## 3. Docker-compose Networking
+
+### Application Port Allocation
+
+In `docker-compose.yml`, ports are allocated as follows:
+- **Client**: Port `3000` on the host is mapped to port `3000` on the frontend container.
+- **Backend**: Port `3001` on the host is mapped to port `3001` on the backend container.
+- **MongoDB**: Port `27017` on the host is mapped to port `27017` on the MongoDB container.
+
+### Bridge Network Implementation
+
+By default, Docker Compose creates a default network (`bridge` network) for all services defined in `docker-compose.yml`. This allows containers to communicate with each other using service names as hostnames (`client`, `backend`, `mongo`).
+
+## 4. Docker-compose Volume Definition and Usage
+
+### MongoDB Volume
+
+Volumes are defined in `docker-compose.yml` to persist MongoDB data:
+- **Volumes**: `mongo-data` volume is defined to persist MongoDB data at `/data/db` within the MongoDB container.
+
+### Usage
+
+- MongoDB container (`mongo`) uses the `mongo-data` volume to store and persist database files (`/data/db`) across container restarts, ensuring data persistence.
