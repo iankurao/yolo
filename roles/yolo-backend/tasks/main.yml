@@ -1,0 +1,25 @@
+---
+- name: Install Node.js
+  apt:
+    name: nodejs
+    state: present
+
+- name: Install npm
+  apt:
+    name: npm
+    state: present
+
+- name: Clone backend repository
+  git:
+    repo: 'https://github.com/iankurao/yolo.git'
+    dest: /home/vagrant/backend
+
+- name: Install backend dependencies
+  command: npm install
+  args:
+    chdir: /home/vagrant/backend
+
+- name: Start backend application
+  command: npm start
+  args:
+    chdir: /home/vagrant/backend
