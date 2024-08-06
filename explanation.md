@@ -62,3 +62,30 @@ Volumes are defined in `docker-compose.yml` to persist MongoDB data:
 ### Usage
 
 - MongoDB container (`mongo`) uses the `mongo-data` volume to store and persist database files (`/data/db`) across container restarts, ensuring data persistence.
+
+## 5. Git Workflow
+
+### Workflow Description
+
+The Git workflow used to achieve the task involved:
+- **Repository Initialization**: Initializing a Git repository in the project root.
+- **Commit Strategy**: Making frequent, descriptive commits throughout development.
+- **Branch Management**: Using feature branches (`docker-setup`, `feature/add-product`) for new development and merging them into `master` after code review.
+- **Version Control**: Tagging releases (`v1.0`, `v1.1`) in Git to track stable versions of the application.
+- **Collaboration**: Using pull requests for code reviews and collaboration with team members.
+
+## 6. Successful Running of Applications and Debugging Measures
+
+### Deployment Success
+
+The applications (`frontend`, `backend`, `mongodb`) were successfully deployed using Docker Compose:
+- **Testing**: Thorough testing was conducted locally to ensure correct container interaction and application functionality.
+- **Debugging**: Common Docker issues such as network configuration, volume mounting, and container connectivity were resolved using Docker logs (`docker logs <container_name>`), inspecting network configurations, and Docker Compose troubleshooting.
+
+## 7. Docker Image Tag Naming Standards
+
+### Naming Strategy
+
+Docker images were tagged with:
+- **Semantic Versioning**: Following the `semantic versioning` standard (`v1.0`, `v1.1`) to denote stable releases.
+- **Latest Tag**: A `latest` tag was applied to the most recent stable release for ease of reference (`v1.1`).
