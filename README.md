@@ -41,29 +41,26 @@ Make sure that you have the following installed:
 
 # Project Structure
    
+ yolo/
+    ├── ansible/
+    │   ├── playbook.yml
+    │   ├── 
+    │   ├── hosts
+    │   └── roles/
+    │       ├── backend/
+    │       │   └──tasks/
+    │       │       └── main.yml
+    │       │   
+    │       ├── frontend/
+    │       │   └── tasks/
+    │       │       └── main.yml
+    │       │   
+    │       └── mongodb/
+    │           ├── tasks/
+    │           │   └── main.yml
+    │           └── files/
+    └── Vagrantfile
 
-   ├── client
-   │ ├── Dockerfile
-   │ ├── package.json
-   │ ├── src
-   │ └── ...
-   ├── backend
-   │ ├── Dockerfile
-   │ ├── package.json
-   │ ├── src
-   │ └── ...
-   ├── ansible
-    │ ├── playbook.yml
-    │ ├── roles
-    │ ├── hosts
-   │ └── ...
-   ├── terraform
-    │ ├── main.tf
-    │ ├── variables.tf
-    │ └── ...
-   ├── Vagrantfile
-   ├── docker-compose.yml
-   └── README.md
 
 
 ## Setup Instructions
