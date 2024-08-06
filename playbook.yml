@@ -1,9 +1,37 @@
 ---
-- name: Provision server and deployment
+- name: Setup E-commerce Application
   hosts: all
   become: yes
-  roles:
-    - frontend
-    - backend
-    - mongodb
+  vars_files:
+    - vars/main.yml
+  tasks:
+    - name: Update
+      apt:
+        update_cache: yes
 
+    - name: Install Docker and Docker Compose
+      apt:
+        name:
+          - docker.io
+          - docker-compose
+        state: present
+
+    - name: Create Docker network
+      docker_network:
+        name: "{{ network_name }}"
+        state: present
+
+    - name: Create MongoDB volume
+      docker_volume:
+        name: "{{ mongodb_volume }}"
+        state: present
+
+    - name: Clone the repository
+      git:
+        repo: "{{ repository_url }}"
+        dest: /home/vagrant/yolo
+        version: "{{ repository_version }}"
+  roles:
+    - yolo-backend
+    - mongodb
+    - yolo-frontend
