@@ -89,3 +89,42 @@ The applications (`frontend`, `backend`, `mongodb`) were successfully deployed u
 Docker images were tagged with:
 - **Semantic Versioning**: Following the `semantic versioning` standard (`v1.0`, `v1.1`) to denote stable releases.
 - **Latest Tag**: A `latest` tag was applied to the most recent stable release for ease of reference (`v1.1`).
+
+
+
+# IP3 Configuration Management 
+
+### Configuration Management
+
+Ansible is used for configuration management and application deployment. 
+
+The playbook is located in the ansible directory and defines tasks to set up Docker containers for the client and backend services.
+
+Roles: Each container is configured in its own unique role for modularity and reusability.
+Variables: Variables are used for configuration values to make the playbook flexible and easy to manage.
+Blocks and Tags: Tasks are grouped using blocks and tags for better organization and ease of execution.
+
+# Explanation
+
+## Stage 1: Ansible Instrumentation
+
+### Choice of Base Image
+We chose Ubuntu 22.04 LTS as the base image for its stability and compatibility with Docker and Node.js.
+
+### Dockerfile Directives
+- `FROM`: Specifies the base image.
+- `RUN`: Executes commands to set up the environment.
+- `COPY`: Copies files from the local filesystem into the container.
+- `CMD`: Specifies the command to run the application.
+
+### Docker-Compose Networking
+Docker-compose sets up a bridge network to allow communication between containers. Ports are allocated to expose services.
+
+### Docker-Compose Volume
+Volumes are used to persist data, especially for MongoDB, ensuring data persistence across container restarts.
+
+### Git Workflow
+- Regular commits with descriptive messages.
+
+## Stage 2: Ansible and Terraform Instrumentation
+
