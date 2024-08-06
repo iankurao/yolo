@@ -25,7 +25,7 @@ This repository contains a Dockerized e-commerce application that allows you to 
 
 ## Docker Hub Images
 
-To see the Docker images, check my Docker Hub profile: [faithkimani](https://hub.docker.com/u/iankurao)
+To see the Docker images, check my Docker Hub profile: [iankurao](https://hub.docker.com/u/iankurao)
 
 ## Requirements
 
@@ -122,3 +122,28 @@ The playbook is located in the ansible directory and defines tasks to set up Doc
 Roles: Each container is configured in its own unique role for modularity and reusability.
 Variables: Variables are used for configuration values to make the playbook flexible and easy to manage.
 Blocks and Tags: Tasks are grouped using blocks and tags for better organization and ease of execution.
+
+# Explanation
+
+## Stage 1: Ansible Instrumentation
+
+### Choice of Base Image
+We chose Ubuntu 22.04 LTS as the base image for its stability and compatibility with Docker and Node.js.
+
+### Dockerfile Directives
+- `FROM`: Specifies the base image.
+- `RUN`: Executes commands to set up the environment.
+- `COPY`: Copies files from the local filesystem into the container.
+- `CMD`: Specifies the command to run the application.
+
+### Docker-Compose Networking
+Docker-compose sets up a bridge network to allow communication between containers. Ports are allocated to expose services.
+
+### Docker-Compose Volume
+Volumes are used to persist data, especially for MongoDB, ensuring data persistence across container restarts.
+
+### Git Workflow
+- Regular commits with descriptive messages.
+
+## Stage 2: Ansible and Terraform Instrumentation
+
