@@ -7,5 +7,3 @@ This repository contains a Dockerized e-commerce application that allows you to 
 ##
 To see the images check my dockerhub profiles
 https://hub.docker.com/u/iankurao
-
-#
