@@ -1,0 +1,25 @@
+---
+- name: Install Node.js
+  apt:
+    name: nodejs
+    state: present
+
+- name: Install npm
+  apt:
+    name: npm
+    state: present
+
+- name: Clone frontend repository
+  git:
+    repo: 'https://github.com/iankurao/yolo.git'
+    dest: /home/vagrant/frontend
+
+- name: Install frontend dependencies
+  command: npm install
+  args:
+    chdir: /home/vagrant/frontend
+
+- name: Start frontend application
+  command: npm start
+  args:
+    chdir: /home/vagrant/frontend
