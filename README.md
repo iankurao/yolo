@@ -64,3 +64,26 @@ Make sure that you have the following installed:
    ├── Vagrantfile
    ├── docker-compose.yml
    └── README.md
+
+
+## Setup Instructions
+
+### Clone the Repository
+
+git clone git@github.com:iankurao/yolo.git
+cd DevOps-Microservice-Setup
+
+## start the Vagrant Machine
+`vagrant up`
+
+## SSH into the Vagrant Machine
+`vagrant ssh`
+
+## Navigate to the Project Directory and Run the Ansible Playbook
+`ansible-playbook playbook.yml -i hosts`
+
+## Navigate to the Client Folder 
+ `cd client`
+
+## Run the folllowing command to install the dependencies 
+ `npm install`
