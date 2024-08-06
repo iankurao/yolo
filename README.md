@@ -38,3 +38,29 @@ Make sure that you have the following installed:
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 - [Terraform](https://learn.hashicorp.com/terraform/getting-started/install)
+
+# Project Structure
+   
+
+   ├── client
+   │ ├── Dockerfile
+   │ ├── package.json
+   │ ├── src
+   │ └── ...
+   ├── backend
+   │ ├── Dockerfile
+   │ ├── package.json
+   │ ├── src
+   │ └── ...
+   ├── ansible
+    │ ├── playbook.yml
+    │ ├── roles
+    │ ├── hosts
+   │ └── ...
+   ├── terraform
+    │ ├── main.tf
+    │ ├── variables.tf
+    │ └── ...
+   ├── Vagrantfile
+   ├── docker-compose.yml
+   └── README.md
