@@ -118,11 +118,10 @@ docker-compose up
 
  ### Configuration Management
 
-Ansible
-Ansible is used for configuration management and application deployment. The playbook is located in the ansible directory and defines tasks to set up Docker containers for the client and backend services.
+Ansible is used for configuration management and application deployment. 
+
+The playbook is located in the ansible directory and defines tasks to set up Docker containers for the client and backend services.
 
 Roles: Each container is configured in its own unique role for modularity and reusability.
 Variables: Variables are used for configuration values to make the playbook flexible and easy to manage.
 Blocks and Tags: Tasks are grouped using blocks and tags for better organization and ease of execution.
-Terraform
-Terraform is used for resource provisioning. In the terraform directory, scripts are provided to create the necessary infrastructure for running the application.
