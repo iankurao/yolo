@@ -136,12 +136,17 @@ Docker-compose sets up a bridge network to allow communication between container
 ### Docker-Compose Volume
 Volumes are used to persist data, especially for MongoDB, ensuring data persistence across container restarts.
 
-### Git Workflow
-- Regular commits with descriptive messages.
-
-
+## 5. Git Workflow
+- Forked and cloned the repository.
+- Created separate branches for each major change.
+- Made descriptive commits for each step.
+- Ensured a well-documented README file.
+- created the diffrerent dockerfile, on client and backend
+- created the images and pushed to my docker account
+- updated my readme
+- 
 ### WEEK 8 KUBERNETES ORCHESTRATION Structure
-```markdown
+
 # Explanation of Kubernetes Orchestration Choices
 
 ## Kubernetes Objects
@@ -156,8 +161,16 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 - **LoadBalancer**: Used to expose the frontend service to the internet.
 - **ClusterIP**: Backend and MongoDB use ClusterIP for internal communication.
 
-## Git Workflow
-- Followed a standard Git workflow with feature branches, frequent commits, and clear commit messages.
+
+## 5. Git Workflow
+- Forked and cloned the repository.
+- Created separate branches for each major change.
+- Made descriptive commits for each step.
+- Ensured a well-documented README file.
+- created the different dockerfile, on client and backend
+- created the images and pushed to my docker account
+- updated my readme
+-  Followed a standard Git workflow with feature branches, frequent commits, and clear commit messages.
 
 ## Debugging and Troubleshooting
 - Encountered issues with LoadBalancer service not getting an external IP—resolved by double-checking the service type and firewall settings.
