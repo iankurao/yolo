@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-client
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ecommerce-client
+  template:
+    metadata:
+      labels:
+        app: ecommerce-client
+    spec:
+      containers:
+      - name: client
+        image: iankurao/ecommerce-client:v1
+        ports:
+        - containerPort: 3000
