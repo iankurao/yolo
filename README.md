@@ -56,6 +56,9 @@ To see the Docker images, check my Docker Hub profile: [iankurao](https://hub.do
     └── Vagrantfile
 
 
+## THIS README DOCUMENTS the project through various stages from week 4- "Creating a basic microservice" to week 8- "KUBERNETES Orchestration Project" of my MORINGA SCHOOL DEVOPS Classes.
+
+## WEEK 4 IP2 CREATING A BASIC MICROSERVICE
 
 ## Setup Instructions
 
@@ -99,13 +102,13 @@ cd DevOps-Microservice-Setup
 
  `npm start`
 
-
-
  ## Steps to Run with Docker
 1. Build the Docker images:
 docker-compose build
 2. Start the Docker containers:
 docker-compose up
+
+
 
  ### WEEK 6 IP3 Configuration Management
 
@@ -149,20 +152,20 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 
 # Explanation of Kubernetes Orchestration Choices
 
-## Kubernetes Objects
+## 1. Kubernetes Objects
 - **Deployments**: Used for all components to ensure scalability and self-healing properties.
 - **StatefulSets**: Chosen for MongoDB to ensure consistent naming and stable network identifiers.
 - **Services**: LoadBalancer service used for frontend to expose it to the internet. ClusterIP used for internal communication between services.
 
-## Persistent Storage
+## 2. Persistent Storage
 - **PersistentVolume and PersistentVolumeClaim**: Used for MongoDB to ensure that data persists across pod restarts.
 
-## Exposing Pods
+## 3. Exposing Pods
 - **LoadBalancer**: Used to expose the frontend service to the internet.
 - **ClusterIP**: Backend and MongoDB use ClusterIP for internal communication.
 
 
-## 5. Git Workflow
+## 4. Git Workflow
 - Forked and cloned the repository.
 - Created separate branches for each major change.
 - Made descriptive commits for each step.
@@ -172,9 +175,9 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 - updated my readme
 -  Followed a standard Git workflow with feature branches, frequent commits, and clear commit messages.
 
-## Debugging and Troubleshooting
+## 5. Debugging and Troubleshooting
 - Encountered issues with LoadBalancer service not getting an external IP—resolved by double-checking the service type and firewall settings.
 
-## Best Practices
+## 6. Best Practices
 - Docker images are tagged with version numbers.
 - Used environment variables for sensitive data management.
