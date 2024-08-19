@@ -145,5 +145,4 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 ### Git Workflow
 - Regular commits with descriptive messages.
 
-## Stage 2: Ansible and Terraform Instrumentation
 
