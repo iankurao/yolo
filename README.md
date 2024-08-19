@@ -110,7 +110,7 @@ docker-compose up
 
 
 
- ### WEEK 6 IP3 Configuration Management
+ # WEEK 6 IP3 Configuration Management
 
 Ansible is used for configuration management and application deployment. 
 
@@ -148,7 +148,7 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 - created the images and pushed to my docker account
 - updated my readme
 - 
-### WEEK 8 KUBERNETES ORCHESTRATION Structure
+# WEEK 8 KUBERNETES ORCHESTRATION Structure
 
 # Explanation of Kubernetes Orchestration Choices
 
