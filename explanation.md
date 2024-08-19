@@ -124,7 +124,32 @@ Docker-compose sets up a bridge network to allow communication between container
 Volumes are used to persist data, especially for MongoDB, ensuring data persistence across container restarts.
 
 ### Git Workflow
-- Regular commits with descriptive messages.
+- Regular commits with descriptive messages
 
-## Stage 2: Ansible and Terraform Instrumentation
+
+### kubernetes Orchestration Structure
+```markdown
+# Explanation of Kubernetes Orchestration Choices
+
+## Kubernetes Objects
+- **Deployments**: Used for all components to ensure scalability and self-healing properties.
+- **StatefulSets**: Chosen for MongoDB to ensure consistent naming and stable network identifiers.
+- **Services**: LoadBalancer service used for frontend to expose it to the internet. ClusterIP used for internal communication between services.
+
+## Persistent Storage
+- **PersistentVolume and PersistentVolumeClaim**: Used for MongoDB to ensure that data persists across pod restarts.
+
+## Exposing Pods
+- **LoadBalancer**: Used to expose the frontend service to the internet.
+- **ClusterIP**: Backend and MongoDB use ClusterIP for internal communication.
+
+## Git Workflow
+- Followed a standard Git workflow with feature branches, frequent commits, and clear commit messages.
+
+## Debugging and Troubleshooting
+- Encountered issues with LoadBalancer service not getting an external IP—resolved by double-checking the service type and firewall settings.
+
+## Best Practices
+- Docker images are tagged with version numbers.
+- Used environment variables for sensitive data management.
 
