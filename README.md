@@ -2,7 +2,8 @@
 # WEEK 8 IP4 Orchestration
 
 # E-Commerce Dashboard Application
-This repository contains a Dockerized e-commerce application that allows you to manage and add products. The application uses a MongoDB database and is built with Node.js and React. The goal is to create a containerized environment for running the application.
+
+This repository contains a Dockerized e-commerce application that has been deployed on a Google Kubernetes Engine (GKE) cluster. The application includes a frontend built with React, a backend using Node.js, and MongoDB as the database.
 
 ## Table of Contents
 
@@ -28,16 +29,9 @@ This repository contains a Dockerized e-commerce application that allows you to 
 To see the Docker images, check my Docker Hub profile: [iankurao](https://hub.docker.com/u/iankurao)
 
 ## Requirements
-
-Make sure that you have the following installed:
-- [Node.js](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
-- npm
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the MongoDB service with `sudo service mongod start`
-- [Docker](https://docs.docker.com/engine/install/)
-- [Vagrant](https://www.vagrantup.com/docs/installation)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-- [Terraform](https://learn.hashicorp.com/terraform/getting-started/install)
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+- [Docker](https://docs.docker.com/get-docker/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 # Project Structure
    
