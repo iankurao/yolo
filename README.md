@@ -107,7 +107,7 @@ docker-compose build
 2. Start the Docker containers:
 docker-compose up
 
- ### Configuration Management
+ ### WEEK 6 IP3 Configuration Management
 
 Ansible is used for configuration management and application deployment. 
 
@@ -140,3 +140,28 @@ Volumes are used to persist data, especially for MongoDB, ensuring data persiste
 - Regular commits with descriptive messages.
 
 
+### WEEK 8 KUBERNETES ORCHESTRATION Structure
+```markdown
+# Explanation of Kubernetes Orchestration Choices
+
+## Kubernetes Objects
+- **Deployments**: Used for all components to ensure scalability and self-healing properties.
+- **StatefulSets**: Chosen for MongoDB to ensure consistent naming and stable network identifiers.
+- **Services**: LoadBalancer service used for frontend to expose it to the internet. ClusterIP used for internal communication between services.
+
+## Persistent Storage
+- **PersistentVolume and PersistentVolumeClaim**: Used for MongoDB to ensure that data persists across pod restarts.
+
+## Exposing Pods
+- **LoadBalancer**: Used to expose the frontend service to the internet.
+- **ClusterIP**: Backend and MongoDB use ClusterIP for internal communication.
+
+## Git Workflow
+- Followed a standard Git workflow with feature branches, frequent commits, and clear commit messages.
+
+## Debugging and Troubleshooting
+- Encountered issues with LoadBalancer service not getting an external IP—resolved by double-checking the service type and firewall settings.
+
+## Best Practices
+- Docker images are tagged with version numbers.
+- Used environment variables for sensitive data management.
